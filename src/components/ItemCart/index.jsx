@@ -10,13 +10,13 @@ const ItemCart = ({product}) => {
 
     return(
         <div>
-            <img src={product.image} alt={product.detalle} />
+            <img src={product.img} alt={product.detalle} />
 
             <div>
                 <p>Titulo:{product.nombre}</p>
-                <p>Cantidad:{product.quantity}</p>
-                <p>Precio u.:{product.price}</p>
-                <p>SubTotal:{product.quantity * product.price}</p>
+                <p>Cantidad:{product.stock}</p>
+                <p>Precio u.:{product.precio}</p>
+                <p>SubTotal:{product.stock * product.precio}</p>
                 <button onClick={()=> removeProduct(product.id)}>Eliminar</button>
             </div>
 

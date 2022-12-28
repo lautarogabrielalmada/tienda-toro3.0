@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom" //permite conectar la aplicacion con el navegador tambien se ponen las routes y route
 import CartProvider from "./context/CartContext"
+import Cart from "./components/Cart"
 
 const App = () => {
     const bienvenida = "Bienvenidos a la tienda Electronica Toro";
@@ -22,9 +23,11 @@ const App = () => {
                 
 
                 <Routes>
+                    <Route path="/cart/cartId" element={<Cart/>}></Route> 
                     <Route path="/" element={<ItemListContainer greeting={bienvenida}/>}></Route> 
                     <Route path="/category/:categoryId" element={<ItemListContainer/>}></Route> 
                     <Route path="/detail/:productId" element={<ItemDetailContainer/>}></Route> 
+                    
                 </Routes>
 
             </main>
