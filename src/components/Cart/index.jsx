@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import ItemCart from "../ItemCart";
+import Swal from "sweetalert2";
+import "./cart.css";
 
 const Cart = () => {
 
@@ -28,6 +30,14 @@ const handleClick = () => {
     addDoc(ordersCollection, order)
     .then(({id})=> console.log(id))
 
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: '¡Su compra fue realizada con exito!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+
 }
 
     if(cart.length === 0){
@@ -47,7 +57,7 @@ const handleClick = () => {
         }
         <p>total: $ {totalPrice()}</p>
 
-        <button onClick={handleClick}>Emitir compra</button>
+        <button className="emitir-compra" onClick={handleClick} swak>Emitir compra</button>
         </>
     )
 }

@@ -22,10 +22,10 @@ return(
         {count}
         </p>
 
-        <button onClick={decrement}>-</button>
-        <button onClick={increment}>+</button>
+        <button className="restar-carrito" onClick={decrement}>-</button>
+        <button className="sumar-carrito" onClick={increment}>+</button>
        
-        <button onClick={() => onAdd(count)} disabled={!count}>Agregar al carrito</button>
+        <button className="agregar-carrito" onClick={() => onAdd(count)} disabled={!count}>Agregar al carrito</button>
         
     </div>
 )

@@ -46,7 +46,7 @@ const ItemCart = ({product}) => {
         <Card.Text>
         <p>SubTotal: ${product.quantity * product.precio}</p>
         </Card.Text>
-        <button onClick={()=> removeProduct(product.id)}>Eliminar</button>
+        <button className="elimnar-carrito" onClick={()=> removeProduct(product.id)}>Eliminar</button>
     </Card.Body>
     </Card>
     </div>
